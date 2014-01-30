@@ -16,6 +16,7 @@ public class MainactivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	private static final String NUMBER_5_DOT_5 = "25";
 	private static final String ADD_DECIMAL_RESULT = "98";
 	private static final String MULTIPLY_RESULT = "1776";
+	private static final String SUBSTRUCT_RESULT = "-50";
 	private static final String TAG = "MainactivityTest";
 
 	TextView result;
@@ -82,5 +83,15 @@ public class MainactivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		assertTrue("Multiply result should be " + MULTIPLY_RESULT + " but was "+ mathResult, mathResult.equals(MULTIPLY_RESULT));  
 	}  
+	
+	public void testSubstructValues() {  
+
+		sendKeys(NUMBER_24+NUMBER_74+ "DPAD_RIGHT ENTER "+"DPAD_RIGHT ENTER"); 
+
+		String mathResult = result.getText().toString();  
+
+		assertTrue("Multiply result should be " + SUBSTRUCT_RESULT + " but was "+ mathResult, mathResult.equals(SUBSTRUCT_RESULT));  
+	}  
+
 
 }
