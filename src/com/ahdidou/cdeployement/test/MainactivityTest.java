@@ -92,6 +92,13 @@ public class MainactivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 		assertTrue("Multiply result should be " + SUBSTRUCT_RESULT + " but was "+ mathResult, mathResult.equals(SUBSTRUCT_RESULT));  
 	}  
+	
+	public void testShowNext() {  
+
+		sendKeys(NUMBER_24+NUMBER_74+ " ENTER "+" ENTER"); 
+
+		assertTrue("Showing Next" ,true);  
+	}
 
 
 }
